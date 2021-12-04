@@ -77,4 +77,53 @@ def print_shop(s):
 #c = read_customer("../Customer_b.csv")
 #print_customer(c)
 
+
+#Main function to run application
+def main_menu():
+
+# Menu display and choice inputs
+    while True:
+        display_menu()
+        choice = input("Choice: ")
+
+        if (choice=="1"):
+
+            main_menu()
+            
+        if (choice=="2"):
+             main_menu()
+                   
+        elif (choice=="3"):
+            main_menu() 
+            
+        elif (choice=="4"):
+            main_menu()
+          
+        elif (choice=="5"):
+            main_menu()                
+      
+        elif (choice=="6"):  
+            main_menu()
+            
+        elif (choice=="x"):
+            print(f'Exiting')
+            quit()
+        
+        else:
+            main_menu()
+            
+            
+def display_menu():
+  print("\nMovies DB\n--------\n")
+  print("MENU\n====")
+  print("1 - View Films")
+  print("2 - View Actors by Year of Birth & Gender")
+  print("3 - View Studios")
+  print("4 - Add New Country")
+  print("5 - View Movie with Subtitles")
+  print("6 - Add New MovieScript")
+  print("x - Exit application")
+
+if __name__  == "__main__":
+    main_menu()  
   
