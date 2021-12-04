@@ -27,7 +27,7 @@ def create_and_stock_shop():
     s = Shop()
     
     ## ADD Null check here ##
-    with open('stock.csv') as csv_file:
+    with open('../stockp.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         first_row = next(csv_reader)
         s.cash = float(first_row[0])
@@ -74,5 +74,7 @@ def print_shop(s):
         
 # s = create_and_stock_shop()
 # print_shop(s)
-c = read_customer("Customer_a.csv")
-print_customer(c)
+#c = read_customer("../Customer_b.csv")
+#print_customer(c)
+
+  

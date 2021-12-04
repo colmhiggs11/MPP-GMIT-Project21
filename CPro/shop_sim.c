@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 
-
 struct Product{
 	char* name;
 	double price;
@@ -55,7 +54,7 @@ struct Shop createAndStockShop()
 	size_t len =0;
 	ssize_t read;
 	
-	fp =fopen("stock.csv","r");
+	fp =fopen("../stockc.csv","r");
 	if(fp==NULL)
 		exit(EXIT_FAILURE);
 	
