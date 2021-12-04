@@ -48,22 +48,18 @@ void printCustomer(struct Customer c)
 
 struct Shop createAndStockShop()
 {
+	struct Shop shop = {200};
 	FILE * fp;
 	char * line =NULL;
 	size_t len =0;
 	ssize_t read;
 	
-	fp =fopen("../stock.csv","r");
+	fp =fopen("../stockc.csv","r");
 	if(fp==NULL)
 		exit(EXIT_FAILURE);
 	
 	// Need to add in the code to get to print the cash of the shop
 	
-	read = getline(&line, &len, fp);
-	float cash =atof(line);
-	// printf("Cash in shop is %.2f\n:", cash);
-	struct Shop shop = { cash };
-
 	
 	while ((read = getline(&line, &len, fp)) !=-1) {
 
@@ -111,8 +107,8 @@ void clrscr()
 int main(void)
 {	
 
-	struct Shop shop =  createAndStockShop();
-	printShop(shop);
+	//struct Shop shop =  createAndStockShop();
+	//printShop(shop);
 	
 	
 	
@@ -189,6 +185,7 @@ int main(void)
                     }
 					break;
    
+                
         
             case 3:
 				clrscr();
