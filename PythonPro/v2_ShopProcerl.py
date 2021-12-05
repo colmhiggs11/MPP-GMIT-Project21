@@ -27,7 +27,7 @@ def create_and_stock_shop():
     s = Shop()
     
     ## ADD Null check here ##
-    with open('../stockp.csv') as csv_file:
+    with open('../stock.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         first_row = next(csv_reader)
         s.cash = float(first_row[0])
